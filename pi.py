@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from random import random
+from math import pow
 import argparse
 
 def compute_pi(attempts):
@@ -9,7 +10,7 @@ def compute_pi(attempts):
     # Try the specified number of random points
     while (tries < attempts):
         tries += 1
-        if ( (random()**2 + random()**2) < 1):
+        if ( pow(random(),2) + pow(random(),2) < 1):
             inside += 1
     
     # Compute the ratio and return
